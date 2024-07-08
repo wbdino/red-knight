@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://mpdj77l21g57"]
+
+[ext_resource type="PackedScene" uid="uid://c7u7w4ohex7tn" path="res://player/player.tscn" id="1_62khe"]
+[ext_resource type="PackedScene" uid="uid://cwxeu1cxf6k22" path="res://UI/gameUI.tscn" id="4_27am8"]
+[ext_resource type="PackedScene" uid="uid://dlugb0qsxye0n" path="res://misc/meet.tscn" id="5_8fe1k"]
+[ext_resource type="PackedScene" uid="uid://ep1ce7r4k77h" path="res://system/mob_spawn.tscn" id="6_gvbry"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_62khe")]
+position = Vector2(743, 429)
+health = 10
+
+[node name="Skull" parent="." instance=ExtResource("5_8fe1k")]
+position = Vector2(875, 183)
+
+[node name="Mob_spawm" parent="." instance=ExtResource("6_gvbry")]
+
+[node name="GameUI" parent="." instance=ExtResource("4_27am8")]
+
+[node name="meet" parent="." instance=ExtResource("5_8fe1k")]
+position = Vector2(242, 363)
+
+[node name="meet2" parent="." instance=ExtResource("5_8fe1k")]
+position = Vector2(45, 122)
+
+[node name="meet3" parent="." instance=ExtResource("5_8fe1k")]
+position = Vector2(613, 579)

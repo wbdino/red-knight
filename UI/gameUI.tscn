@@ -1,0 +1,82 @@
+[gd_scene load_steps=8 format=3 uid="uid://cwxeu1cxf6k22"]
+
+[ext_resource type="Script" path="res://UI/gameUI.gd" id="1_6pom6"]
+[ext_resource type="Texture2D" uid="uid://d132ja5ang4q2" path="res://addons/Tiny Swords (Update 010)/UI/Banners/Banner_Horizontal.png" id="1_kj3ju"]
+[ext_resource type="Texture2D" uid="uid://x814vk53xtpt" path="res://addons/Tiny Swords (Update 010)/Resources/Resources/M_Idle_(NoShadow).png" id="3_uhk6x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_uja8d"]
+font_size = 32
+outline_size = 6
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3i4yb"]
+texture = ExtResource("1_kj3ju")
+texture_margin_left = 64.0
+texture_margin_top = 128.0
+texture_margin_right = 64.0
+texture_margin_bottom = 128.0
+axis_stretch_horizontal = 2
+axis_stretch_vertical = 2
+
+[sub_resource type="LabelSettings" id="LabelSettings_kj8u0"]
+line_spacing = 1.0
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4278"]
+atlas = ExtResource("3_uhk6x")
+region = Rect2(40, 48, 56, 56)
+
+[node name="GameUI" type="CanvasLayer"]
+script = ExtResource("1_6pom6")
+
+[node name="TimerLabel" type="Label" parent="."]
+unique_name_in_owner = true
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.0
+offset_top = 10.0
+offset_right = 46.0
+offset_bottom = 33.0
+grow_horizontal = 2
+text = "08:50"
+label_settings = SubResource("LabelSettings_uja8d")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Panel" type="Panel" parent="."]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -225.0
+offset_bottom = 183.0
+grow_horizontal = 0
+theme_override_styles/panel = SubResource("StyleBoxTexture_3i4yb")
+
+[node name="MeetLabel" type="Label" parent="Panel"]
+unique_name_in_owner = true
+layout_mode = 1
+offset_left = 117.0
+offset_top = 70.0
+offset_right = 167.0
+offset_bottom = 115.0
+text = "50 "
+label_settings = SubResource("LabelSettings_kj8u0")
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.5
+offset_top = -23.5
+offset_right = 46.5
+offset_bottom = 69.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.5, 0.5)
+texture = SubResource("AtlasTexture_i4278")

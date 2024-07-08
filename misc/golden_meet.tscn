@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://n1qfdm8p1g7b"]
+
+[ext_resource type="PackedScene" uid="uid://dlugb0qsxye0n" path="res://misc/meet.tscn" id="1_ryovi"]
+
+[node name="meet" instance=ExtResource("1_ryovi")]
+self_modulate = Color(3, 1.5, 0, 0.941)
+scale = Vector2(1.5, 1.5)
+regeneration_amount = 100
